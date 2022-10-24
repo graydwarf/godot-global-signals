@@ -1,0 +1,28 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://scenes/unit/unit.tscn" type="PackedScene" id=1]
+[ext_resource path="res://scenes/main.gd" type="Script" id=2]
+
+[node name="Main" type="Node2D"]
+script = ExtResource( 2 )
+
+[node name="Button" type="Button" parent="."]
+margin_left = 45.0
+margin_top = 48.0
+margin_right = 111.0
+margin_bottom = 68.0
+text = "SpinUnit"
+
+[node name="Unit" parent="." instance=ExtResource( 1 )]
+position = Vector2( 366, 87 )
+
+[node name="Unit2" parent="." instance=ExtResource( 1 )]
+position = Vector2( 264, 168 )
+
+[node name="Unit3" parent="." instance=ExtResource( 1 )]
+position = Vector2( 411, 250 )
+
+[node name="Unit4" parent="." instance=ExtResource( 1 )]
+position = Vector2( 533, 163 )
+
+[connection signal="pressed" from="Button" to="." method="_on_Button_pressed"]
